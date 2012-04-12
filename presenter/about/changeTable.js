@@ -1,26 +1,32 @@
 
 require('util', function (error, util) {
-  if (error) throw error;
+  if (error) return exports(error);
 
   require('changeTable', function (error, Abstract) {
-    if (error) throw error;
+    if (error) return exports(error);
 
-    // Create changeTable prototype object
-    function changeTable() {
-      Abstract.apply(this, arguments);
+    require('/customFormatModule.js', function (error, format) {
+      if (error) return exports(error);
 
-      // default options
-      this.template('/template/default.html');
-    }
-    util.inherits(changeTable, Abstract);
+      // Create changeTable prototype object
+      function changeTable() {
+        Abstract.apply(this, arguments);
 
-    // When only one directory level is given
-    changeTable.prototype.index = function () {
-      this.title('About page');
-      this.content('<h1>Hallo World</h1><a href="/"> Go to home </a>', 'div', 'content');
-    };
+        // default options
+        this.template('/default.html');
+      }
+      util.inherits(changeTable, Abstract);
 
-    // export changeTable
-    exports(changeTable);
+      // When only one directory level is given
+      changeTable.prototype.index = function () {
+        this.title('About page');
+
+        var output = format.h1('About page') + format.anchor('Go to home', '/');
+        this.content(output, 'div', 'content');
+      };
+
+      // export changeTable
+      exports(changeTable);
+    });
   });
 });
