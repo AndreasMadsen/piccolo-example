@@ -3,7 +3,7 @@
 To setup do the following:
 
 ```shell
-npm install piccolo@0.2.0
+npm install piccolo@0.3.0
 git clone git://github.com/AndreasMadsen/piccolo-example.git project
 ```
 

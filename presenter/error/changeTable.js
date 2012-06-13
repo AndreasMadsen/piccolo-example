@@ -5,7 +5,7 @@ require('util', function (error, util) {
   require('changeTable', function (error, Abstract) {
     if (error) return exports(error);
 
-    require('/customFormatModule.js', function (error, format) {
+    require('customFormatModule', function (error, format) {
       if (error) return exports(error);
 
       // Create changeTable prototype object
@@ -21,7 +21,7 @@ require('util', function (error, util) {
       changeTable.prototype.error404 = function (error) {
         this.title('Error page');
 
-        var output = format.h1(error.status + ' - ' + error.message) + format.pre(error.origin.stack);
+        var output = format.h1('404 - Not Found') + format.pre(error.stack);
         this.content(output, 'div', 'content');
       };
 

@@ -5,7 +5,7 @@ require('util', function (error, util) {
   require('changeTable', function (error, Abstract) {
     if (error) return exports(error);
 
-    require('/customFormatModule.js', function (error, format) {
+    require('customFormatModule', function (error, format) {
       if (error) return exports(error);
 
       // Create changeTable prototype object
