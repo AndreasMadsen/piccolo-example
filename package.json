@@ -1,0 +1,27 @@
+{
+  "name": "piccolo-example",
+  "description": "Example of piccolo the isomorphic projection framework",
+  "version": "0.5.0",
+  "private": true,
+  "author": "Andreas Madsen <amwebdk@gmail.com>",
+  "main": "./project.js",
+  "repository" : {
+    "type": "git",
+    "url": "git://github.com/AndreasMadsen/piccolo-example.git"
+  },
+  "keywords": [
+    "isomorphic",
+    "Isomorphism",
+    "projection",
+    "framework",
+    "example"
+  ],
+  "dependencies": {
+    "piccolo": "0.5.x",
+  },
+  "license": "MIT",
+  "engines": {
+    "node": "0.8",
+    "npm": "1"
+  }
+}

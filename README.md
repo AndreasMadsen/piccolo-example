@@ -3,14 +3,15 @@
 To setup do the following:
 
 ```shell
-npm install piccolo@0.4.0
 git clone git://github.com/AndreasMadsen/piccolo-example.git project
+cd project
+npm install
 ```
 
 To start the piccolo server do the following:
 
 ```shell
-node project/project.js
+node project.js
 ```
 
 You can now access the example by visiting http://localhost:8000
