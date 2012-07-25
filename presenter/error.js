@@ -1,7 +1,6 @@
 
 var util = require('util');
 var Document = require('document');
-var format = require('format');
 
 // Create changeTable prototype object
 function Presenter() {
@@ -27,6 +26,7 @@ Presenter.prototype.error404 = function (error) {
   title.setContent('Error page').done();
 
   // modify #content element
-  var output = format.h1('404 - Not Found') + format.pre(error.stack);
+  var output = '<h1>404 - Not Found</h1>' +
+               '<pre>' + error.stack + '</pre>';
   content.setContent(output).done();
 };

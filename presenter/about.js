@@ -1,7 +1,7 @@
 
 var util = require('util');
 var Document = require('document');
-var format = require('format');
+var marked = require('marked');
 
 // Create changeTable prototype object
 function Presenter() {
@@ -27,6 +27,9 @@ Presenter.prototype.index = function () {
   title.setContent('About page').done();
 
   // modify #content element
-  var output = format.h1('About page') + format.anchor('Go to home', '/');
-  content.setContent(output).done();
+  this.readStatic('/about.md', function (error, text) {
+    if (error) throw error; // TODO?
+
+    content.setContent( marked(text) ).done();
+  });
 };

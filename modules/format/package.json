@@ -1,7 +1,0 @@
-{
-  "name": "format",
-  "description": "convert strings to html",
-  "version": "0.0.0",
-  "main": "./core.js",
-  "license": "MIT"
-}
