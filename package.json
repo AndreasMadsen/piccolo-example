@@ -17,7 +17,7 @@
     "example"
   ],
   "dependencies": {
-    "piccolo": "0.6.x",
+    "piccolo": "0.6.x"
   },
   "license": "MIT",
   "engines": {
