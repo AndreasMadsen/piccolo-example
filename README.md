@@ -3,9 +3,8 @@
 To setup do the following:
 
 ```shell
-git clone git://github.com/AndreasMadsen/piccolo-example.git project
+git clone --recursive git://github.com/AndreasMadsen/piccolo-example.git project
 cd project
-git submodule update
 npm install
 ```
 
